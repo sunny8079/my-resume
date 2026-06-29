@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>진선희 | 데이터 기획 &amp; 콘텐츠 디자이너 - 디지털 명함</title>
+
+    <!-- SEO 메타 태그 -->
+    <meta name="description" content="11년간의 금융 데이터 전문성과 웹디자인, 스토어 운영, 영상 제작까지 아우르는 올라운더 진선희의 디지털 명함 및 이력서입니다.">
+    <meta name="keywords" content="진선희, 데이터 기획, 콘텐츠 디자이너, 웹디자인기능사, 에프앤가이드, 이력서, 디지털 명함">
+    <meta name="author" content="진선희">
+
+    <!-- ★ GitHub Pages 배포 주소: https://sunny8079.github.io/my-resume/ ★ -->
+
+    <!-- Open Graph (OG) 태그 - 카카오톡, 페이스북, 링크드인 등에서 공유 시 미리보기 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="진선희 | 데이터 기획 & 콘텐츠 디자이너">
+    <meta property="og:description" content="11년 금융 데이터 전문성 · 웹디자인기능사 · GTQ 포토샵/일러스트 1급 · 스마트스토어 운영 · AI 사무자동화 역량을 갖춘 올라운더의 디지털 명함입니다.">
+    <meta property="og:url" content="https://sunny8079.github.io/my-resume/">
+    <meta property="og:image" content="https://sunny8079.github.io/my-resume/%EC%A0%95%EC%9E%A5%20%EC%82%AC%EC%A7%84.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="진선희 - 데이터 기획 & 콘텐츠 디자이너 프로필 이미지">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="진선희 디지털 명함">
+
+    <!-- Twitter(X) Card 태그 - 트위터/X에서 공유 시 대형 이미지 미리보기 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="진선희 | 데이터 기획 & 콘텐츠 디자이너">
+    <meta name="twitter:description" content="11년 금융 데이터 전문성과 디자인·마케팅 실무를 아우르는 올라운더의 디지털 명함입니다.">
+    <meta name="twitter:image" content="https://sunny8079.github.io/my-resume/%EC%A0%95%EC%9E%A5%20%EC%82%AC%EC%A7%84.png">
+    <meta name="twitter:image:alt" content="진선희 - 데이터 기획 & 콘텐츠 디자이너 프로필 이미지">
+
+    <!-- Canonical URL - 검색엔진에 대표 URL 알림 -->
+    <link rel="canonical" href="https://sunny8079.github.io/my-resume/">
+
+    <!-- 구글 폰트 로드: 영문은 Outfit, 국문은 Noto Sans KR 사용 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS 스타일시트 연결 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 배경 애니메이션용 요소들 (세련된 빛무리 효과) -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- 전환 버튼 (화면 우측 상단에 고정됨) 
+         명함과 이력서 화면에서 동일한 위치에 나타납니다. -->
+    <button id="toggle-btn" class="toggle-btn" aria-label="화면 전환">
+        <span class="btn-text">이력서 보기</span>
+        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+    </button>
+
+    <!-- 전체를 감싸는 메인 컨테이너 -->
+    <main id="app-container" class="app-container">
+
+        <!-- ========================================== -->
+        <!-- 1. 명함 화면 (Card View)                   -->
+        <!-- ========================================== -->
+        <section class="card-view" id="card-view">
+            <!-- 명함 내부 컨텐츠 카드 -->
+            <div class="profile-card">
+                <!-- 상단 장식 바 -->
+                <div class="card-deco-bar"></div>
+
+                <!-- 프로필 헤더 (사진 또는 이니셜, 이름, 직무) -->
+                <div class="card-header">
+                    <!-- 프로필 이미지 (사진 표시) -->
+                    <div class="profile-image">
+                        <img src="정장 사진.png" alt="진선희 프로필 사진">
+                    </div>
+                    <div class="profile-title">
+                        <!-- 수정하실 부분: 본인 이름과 직무 -->
+                        <h1 class="name">진선희</h1> <!-- 이름을 본인 성함으로 바꾸세요 -->
+                        <p class="role">데이터 기획 & 콘텐츠 디자이너</p>
+                        <p class="tagline">11년의 데이터 전문성과 실무 디자인 감각을 갖춘 인재</p>
+                    </div>
+                </div>
+
+                <!-- 명함 상세 연락처 정보 -->
+                <div class="card-body">
+                    <!-- 연락처 항목 1: 이메일 -->
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="label">Email</span>
+                            <a href="mailto:diaz99kr@naver.com" class="value">diaz99kr@naver.com</a>
+                        </div>
+                    </div>
+
+                    <!-- 연락처 항목 2: 전화번호 -->
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="label">Phone</span>
+                            <a href="tel:010-5030-8079" class="value">010-5030-8079</a>
+                        </div>
+                    </div>
+
+                    <!-- 연락처 항목 3: 블로그 -->
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="label">Blog</span>
+                            <a href="https://blog.naver.com/diaz99kr" target="_blank" rel="noopener noreferrer"
+                                class="value">blog.naver.com/diaz99kr</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 명함 하단 푸터 (대표 스택) -->
+                <div class="card-footer">
+                    <span class="skill-tag">데이터 기획/검수</span>
+                    <span class="skill-tag">SQL Query</span>
+                    <span class="skill-tag">웹디자인기능사</span>
+                    <span class="skill-tag">스토어 운영/디자인</span>
+                    <span class="skill-tag">영상 제작 (Vrew/CapCut)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- 2. 이력서 화면 (Resume View)                 -->
+        <!-- ========================================== -->
+        <section class="resume-view" id="resume-view">
+            <div class="resume-sheet">
+
+                <!-- 이력서 헤더 영역 (그라데이션 배너) -->
+                <header class="resume-header">
+                    <h2 class="resume-name">진선희</h2>
+                    <p class="resume-role">데이터 기획 &amp; 콘텐츠 디자이너</p>
+                    <div class="resume-meta">
+                        <span>✉ diaz99kr@naver.com</span>
+                        <span>•</span>
+                        <span>☎ 010-5030-8079</span>
+                        <span>•</span>
+                        <span>📝 수익형 블로그 마케터 활동</span>
+                    </div>
+                </header>
+
+                <!-- 이력서 본문 그리드 레이아웃 -->
+                <div class="resume-body">
+
+                    <!-- 왼쪽 사이드바 (핵심 요약, 기술 스택) -->
+                    <aside class="resume-sidebar">
+
+                        <!-- 프로필 사진 -->
+                        <div class="resume-profile-img-wrapper">
+                            <img src="정장 사진.png" alt="진선희 프로필 사진" class="resume-profile-img">
+                        </div>
+
+                        <!-- 섹션: About Me -->
+                        <section class="resume-section">
+                            <h3 class="section-title">자기 소개</h3>
+                            <p class="about-text">
+                                금융 데이터 플랫폼(에프앤가이드)에서의 11년 실무 경험을 바탕으로 데이터 수집, 검수, 기획 프로세스를 철저히 관리할 수 있는 전문성을 다졌습니다. 출산과
+                                육아로 인한 공백기 동안에도 트렌디한 디지털 광고 채널(네이버 블로그) 수익화를 직접 주도하여 지속적으로 비즈니스 감각을 이어왔습니다. 최근에는 최신 디자인
+                                실무(포토샵 1급, 일러스트 1급, 웹디자인기능사) 역량을 입증하였고, 커머스 스토어 운영 및 마케팅 비디오(Vrew, CapCut) 제작을 아우르는 올라운더
+                                멀티 플레이어로 활약했습니다. 현재는 AI 기반 사무자동화 융합 역량을 확보하여 기업의 생산성을 대폭 극대화할 수 있도록 준비되어 있습니다.
+                            </p>
+                        </section>
+
+                        <!-- 섹션: Tech Skills -->
+                        <section class="resume-section">
+                            <h3 class="section-title">보유 역량</h3>
+                            <div class="skill-group">
+                                <h4>Data & Operations</h4>
+                                <ul class="skill-list">
+                                    <li>데이터 기획 및 상품 설계</li>
+                                    <li>데이터 품질 검수 (QA)</li>
+                                    <li>SQL Query (데이터 추출/검증)</li>
+                                    <li>Microsoft Excel</li>
+                                </ul>
+                            </div>
+                            <div class="skill-group">
+                                <h4>Design & Video</h4>
+                                <ul class="skill-list">
+                                    <li>웹디자인기능사 자격</li>
+                                    <li>포토샵 1급 / 일러스트 1급</li>
+                                    <li>상세페이지 및 인쇄물 디자인</li>
+                                    <li>Vrew / CapCut 영상 편집</li>
+                                </ul>
+                            </div>
+                            <div class="skill-group">
+                                <h4>E-Commerce & AI</h4>
+                                <ul class="skill-list">
+                                    <li>네이버 스마트스토어 관리</li>
+                                    <li>쿠팡 윙(Wing) 스토어 운영</li>
+                                    <li>블로그 SEO 마케팅</li>
+                                    <li>AI 프롬프트 엔지니어링</li>
+                                </ul>
+                            </div>
+                        </section>
+                    </aside>
+
+                    <!-- 오른쪽 메인 콘텐츠 (경력 사항, 프로젝트 경험) -->
+                    <div class="resume-main">
+
+                        <!-- 섹션: Work Experience (경력) -->
+                        <section class="resume-section">
+                            <h3 class="section-title">경력 사항</h3>
+
+                            <!-- 경력 항목 1 (최근 쇼핑몰) -->
+                            <div class="timeline-item">
+                                <div class="timeline-header">
+                                    <h4 class="company-name">건강식품 쇼핑몰</h4>
+                                    <span class="period">2025.01 ~ 2025.12 (1년)</span>
+                                </div>
+                                <p class="job-title">웹디자이너 & 스토어 매니저 (파트타임)</p>
+                                <ul class="work-desc">
+                                    <li>네이버 스마트스토어 및 쿠팡 어드민 상품 등록 및 운영 관리</li>
+                                    <li>이벤트 프로모션 배너 및 상품 상세페이지 웹 디자인 제작</li>
+                                    <li>브랜드 홍보 인쇄물(카탈로그, 패키지 상자, 리플렛) 기획 및 그래픽 디자인</li>
+                                    <li>Vrew와 CapCut을 활용한 숏폼 브랜드 홍보 영상 기획·제작 및 블로그 마케팅 운영</li>
+                                    <li>재직 중 **웹디자인기능사** 국가기술자격 취득으로 실무 전문성 입증</li>
+                                </ul>
+                            </div>
+
+                            <!-- 경력 항목 2 (경단기 블로그) -->
+                            <div class="timeline-item">
+                                <div class="timeline-header">
+                                    <h4 class="company-name">수익형 블로그 채널 운영</h4>
+                                    <span class="period">2014.01 ~ 2024.12 (Hobby & Freelance)</span>
+                                </div>
+                                <p class="job-title">블로그 콘텐츠 기획자 및 광고 크리에이터</p>
+                                <ul class="work-desc">
+                                    <li>육아, 일상 정보, 생활 트렌드 중심의 롱테일 키워드 기반 포스팅 기획</li>
+                                    <li>검색엔진 최적화(SEO) 및 타겟 맞춤형 마케팅 글쓰기를 통한 일일 방문자 트래픽 관리</li>
+                                    <li>애드포스트 및 외부 브랜드 제휴를 통한 디지털 광고 수익 모델 다각화</li>
+                                </ul>
+                            </div>
+
+                            <!-- 경력 항목 3 (에프앤가이드) -->
+                            <div class="timeline-item">
+                                <div class="timeline-header">
+                                    <h4 class="company-name">(주)에프앤가이드</h4>
+                                    <span class="period">2002.12 ~ 2013.12 (11년)</span>
+                                </div>
+                                <p class="job-title">데이터 사업본부 대리 / 금융 데이터 마스터</p>
+                                <ul class="work-desc">
+                                    <li>국내 상장사 기업 재무 및 금융 시장 대용량 데이터 구축 및 운영</li>
+                                    <li>원천 데이터 수집(데이터 입력)부터 철저한 품질 관리 및 데이터 무결성 검수(QA) 기획</li>
+                                    <li>SQL Query를 활용한 금융 정보 데이터베이스(DB) 분석, 추출 및 정밀 오류 검증</li>
+                                    <li>증권사, 연기금 등 주요 B2B 금융권 기업 고객 기술 응대 및 상품 문의 해결</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- 섹션: Certifications & Education (자격 및 교육) -->
+                        <section class="resume-section">
+                            <h3 class="section-title">자격 및 교육 사항</h3>
+
+                            <!-- 교육 사항 -->
+                            <div class="education-item">
+                                <div class="edu-header">
+                                    <h4 class="edu-title">AI 사무자동화(Office Automation) 교육 과정</h4>
+                                    <span class="period">2026.05 ~ 수강 중</span>
+                                </div>
+                                <p class="edu-desc">생성형 AI와 엑셀/파이썬 자동화를 융합한 스마트 워크플로우 실무 교육 수료 중</p>
+                            </div>
+
+                            <!-- 자격 사항 목록 -->
+                            <div class="timeline-item">
+                                <div class="timeline-header">
+                                    <h4 class="company-name">국가기술 및 민간 그래픽 전문 자격증</h4>
+                                    <span class="period">2024 ~ 2025 취득</span>
+                                </div>
+                                <ul class="work-desc">
+                                    <li>**웹디자인기능사** (한국산업인력공단, 2025년 취득)</li>
+                                    <li>**GTQ 포토샵 1급** (한국생산성본부, 2024년 취득)</li>
+                                    <li>**GTQ 일러스트 1급** (한국생산성본부, 2024년 취득)</li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 자바스크립트 연결 -->
+    <script src="script.js"></script>
+</body>
+
+</html>
